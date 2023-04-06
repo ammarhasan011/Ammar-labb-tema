@@ -52,29 +52,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <ul class="menu">
-                            <li class="current-menu-item">
-                                <a href="index.php">Hem</a>
-                            </li>
-                            <li>
-                                <a href="blogg.php">Blogg</a>
-                            </li>
-                            <li>
-                                <a href="undersida.php">Undersida</a>
-                            </li>
-                            <li>
-                                <a href="undersida2.php">Undersida 2</a>
-                            </li>
-                            <li>
-                                <a href="undersida3.php">Undersida 3</a>
-                            </li>
-                            <li>
-                                <a href="undersida4.php">Undersida 4</a>
-                            </li>
-                            <li>
-                                <a href="kontakt.php">Kontakt</a>
-                            </li>
-                        </ul>
+                        <?php wp_nav_menu(); ?>
                     </div>
                 </div>
             </div>
