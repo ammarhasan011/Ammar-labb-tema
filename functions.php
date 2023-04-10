@@ -4,8 +4,6 @@ add_theme_support('post-thumbnails');
 add_theme_support('menus');
 
 
-
-
 // här skapar jag en funktion som hämtar mina css filen
 
 
@@ -31,13 +29,11 @@ add_action('wp_enqueue_scripts', 'sheets', 'script');
 // skapar en funktion för att kunna ha tillgång till menu
 function menu()
 {
-    register_nav_menu('header-menu', array('Header Menu'));
+    $menues = array(
+        "headermenu" => "Headermenu",
+        "sidemenu" => "Sidemenu"
+    );
+
+    register_nav_menus($menues);
 }
 add_action('init', 'menu');
-
-// add_action('ammar_info', 'ammar_funktion');
-// function ammar_funktion()
-// {
-//     echo "hej hej hje ";
-// };
-//    <?php do_action(ammar_funktion); 
