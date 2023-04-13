@@ -10,3 +10,15 @@ Tags: Business
 /* body {
     font-family: Georgia, 'Times New Roman', sans-serif;
 } */
+
+
+/* <?php
+while (have_posts()) {
+    the_post(); ?>
+    <h1>
+        <?php the_title(); ?>
+        <?php the_content(); ?>
+    </h1>
+<?php
+}
+?> */

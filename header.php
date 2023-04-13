@@ -52,7 +52,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <?php wp_nav_menu(); ?>
+                        <?php wp_nav_menu(
+                            array(
+                                'menu' => 'headermenu',
+                                'theme_location' => 'headermenu'
+                            )
+                        ); ?>
                     </div>
                 </div>
             </div>
