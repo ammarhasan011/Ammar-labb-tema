@@ -20,8 +20,8 @@ function sheets()
 // här skapar jag en funktion som hämtar mina js filen
 function script()
 {
-    wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
-    wp_register_script('script', get_template_directory_uri() . '/assets/js/script.js');
+    // wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
+    // wp_register_script('script', get_template_directory_uri() . '/assets/js/script.js');
     wp_enqueue_script('jquery', get_template_part_uri() . '/assets/js/jquery.js', array(), '1.0', true);
     wp_enqueue_script('script', get_template_part_uri() . '/assets/js/script.js', array(), '1.0', true);
 };
@@ -38,3 +38,43 @@ function menu()
     register_nav_menus($menues);
 }
 add_action('init', 'menu');
+
+
+
+// registrerar widgets
+function customwidget()
+{
+    $widgets = array(
+        array(
+            "name" => "sidewidget",
+            "id" => "sidewidget"
+        ),
+
+
+
+        array(
+            "name" => "footer_kort_om_oss",
+            "id" => "footer_kort_om_oss",
+            'before_widget' => '',
+            'after_widget' => ''
+        ),
+        array(
+            "name" => "footer_Kontaktuppgifter",
+            "id" => "footer_Kontaktuppgifter",
+            'before_widget' => '',
+            'after_widget' => ''
+        ),
+        array(
+            "name" => "footer_social-media",
+            "id" => "footer_social-media",
+            'before_widget' => '',
+            'after_widget' => ''
+        ),
+
+
+    );
+    foreach ($widgets as $widget) {
+        register_sidebar($widget);
+    };
+}
+add_action('init', 'customwidget');
