@@ -46,9 +46,10 @@
                             </li>
                         </ul>
                         <ul role="navigation">
-                            <li class="pagenav">
-                                <h2>Sidor</h2>
-                                <ul>
+                            <?php dynamic_sidebar('sidor'); ?>
+                            <!-- <li class="pagenav"> -->
+                            <!-- <h2>Sidor</h2> -->
+                            <!-- <ul>
                                     <li class="page_item current_page_item">
                                         <a href="">Blogg</a>
                                     </li>
@@ -73,22 +74,25 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li class="page_item">
-                                        <a href="">Startsida</a>
-                                    </li>
-                                </ul>
+                                    </li> 
+                            <li class="page_item">
+                                <a href="">Startsida</a>
+                            </li>
+                        </ul>-->
                             </li>
                             <li>
-                                <h2>Arkiv</h2>
+                                <?php dynamic_sidebar('arkiv'); ?>
+                                <!-- <h2>Arkiv</h2>
                                 <ul>
                                     <li>
                                         <a href="arkiv.html">oktober 2016</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li class="categories">
-                                <h2>Kategorier</h2>
+                                <?php dynamic_sidebar('kategorier'); ?>
+
+                                <!-- <h2>Kategorier</h2>
                                 <ul>
                                     <li class="cat-item">
                                         <a href="">Natur</a> (1)
@@ -96,7 +100,7 @@
                                     <li class="cat-item">
                                         <a href="">Okategoriserade</a> (3)
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
                         </ul>
                     </div>

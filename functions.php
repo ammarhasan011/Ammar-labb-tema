@@ -46,26 +46,34 @@ function customwidget()
 {
     $widgets = array(
         array(
-            "name" => "sidewidget",
-            "id" => "sidewidget"
+            "name" => "Aside Sidor",
+            "id" => "sidor"
+        ),
+        array(
+            "name" => "Aside Arkiv",
+            "id" => "arkiv"
+        ),
+        array(
+            "name" => "Aside Kategorier",
+            "id" => "kategorier"
         ),
 
 
 
         array(
-            "name" => "footer_kort_om_oss",
+            "name" => "footer Kort om oss",
             "id" => "footer_kort_om_oss",
             'before_widget' => '',
             'after_widget' => ''
         ),
         array(
-            "name" => "footer_Kontaktuppgifter",
+            "name" => "footer Kontaktuppgifter",
             "id" => "footer_Kontaktuppgifter",
             'before_widget' => '',
             'after_widget' => ''
         ),
         array(
-            "name" => "footer_social-media",
+            "name" => "footer social media",
             "id" => "footer_social-media",
             'before_widget' => '',
             'after_widget' => ''
