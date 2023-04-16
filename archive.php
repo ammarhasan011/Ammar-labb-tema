@@ -60,11 +60,7 @@
                         <p>Sed pretium metus in urna vehicula imperdiet. Fusce at odio vitae felis maximus tincidunt. Nunc porttitor ex a elementum dictum. Maecenas eget arcu nulla. Cras auctor dui aliquet, condimentum orci vel, venenatis nisl. Ut semper magna urna, ac congue dui cursus vitae. Nam sed pharetra leo, vel tincidunt est. Phasellus volutpat tortor nec nulla feugiat congue. Donec quis ligula varius, euismod nisl eu, aliquet metus. Aliquam tempus iaculis odio, sed volutpat mi aliquam aliquet.</p>
                     </article>
                     <nav class="navigation pagination">
-                        <h2 class="screen-reader-text">Inläggsnavigering</h2>
-                        <a class="prev page-numbers" href="">Föregående</a>
-                        <span class="page-numbers current">1</span>
-                        <a class="page-numbers" href="">2</a>
-                        <a class="next page-numbers" href="">Nästa</a>
+                        <?php echo paginate_links(); ?>
                     </nav>
                 </div>
                 <aside id="secondary" class="col-xs-12 col-md-3">
