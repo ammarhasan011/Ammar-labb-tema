@@ -8,8 +8,6 @@
 
                     <?php get_template_part('/template-parts/parts', 'article'); ?>
 
-
-
                     <nav class="navigation pagination">
                         <?php echo paginate_links(); ?>
                     </nav>
