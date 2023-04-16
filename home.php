@@ -23,14 +23,30 @@
                     }
                     ?>
 
-
                     <nav class="navigation pagination">
-                        <h2 class="screen-reader-text">Inläggsnavigering</h2>
+                        <?php global $wp_query;
+                        $big = 9999999999999;
+
+                        echo paginate_links(
+                            array(
+                                'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                                'format' => '?paged=%#%',
+                                'current' => max(1, get_query_var('paged')),
+                                'total' => $wp_query->max_num_pages
+                            )
+                        );
+                        ?>
+                    </nav>
+
+
+                    <!-- <nav class="navigation pagination"> -->
+
+                    <!-- <h2 class="screen-reader-text">Inläggsnavigering</h2>
                         <a class="prev page-numbers" href="">Föregående</a>
                         <span class="page-numbers current">1</span>
                         <a class="page-numbers" href="">2</a>
                         <a class="next page-numbers" href="">Nästa</a>
-                    </nav>
+                    </nav> -->
                 </div>
                 <aside id="secondary" class="col-xs-12 col-md-3">
                     <div id="sidebar">
@@ -38,9 +54,7 @@
                             <li>
                                 <form id="searchform" class="searchform">
                                     <div>
-                                        <label class="screen-reader-text">Sök efter:</label>
-                                        <input type="text" />
-                                        <input type="submit" value="Sök" />
+                                        <?php dynamic_sidebar('search'); ?>
                                     </div>
                                 </form>
                             </li>
