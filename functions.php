@@ -20,12 +20,12 @@ function sheets()
 // här skapar jag en funktion som hämtar mina js filen
 function script()
 {
-    // wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
-    // wp_register_script('script', get_template_directory_uri() . '/assets/js/script.js');
-    // wp_enqueue_script("jquery", get_template_directory_uri() . '/assets/js/jquery.js', '', '1,0', true);
-    // wp_enqueue_script("script", get_template_directory_uri() . '/assets/js/script.js', '', '1,0', true);
-    wp_enqueue_script('jquery', get_template_part_uri() . '/assets/js/jquery.js', '', '1,0', true);
-    wp_enqueue_script('script', get_template_part_uri() . '/assets/js/script.js', '', '1.0', true);
+    wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
+    wp_register_script('script', get_template_directory_uri() . '/assets/js/script.js');
+    wp_enqueue_script("jquery", get_template_directory_uri() . '/assets/js/jquery.js', '', '1,0', true);
+    wp_enqueue_script("script", get_template_directory_uri() . '/assets/js/script.js', '', '1,0', true);
+    // wp_enqueue_script('jquery', get_template_part_uri() . '/assets/js/jquery.js', '', '1,0', true);
+    // wp_enqueue_script('script', get_template_part_uri() . '/assets/js/script.js', '', '1.0', true);
 };
 add_action('wp_enqueue_scripts', 'sheets', 'script');
 

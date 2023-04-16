@@ -1,3 +1,4 @@
+<!-- template för sidobaren -->
 <ul>
     <li>
         <form id="searchform" class="searchform">
