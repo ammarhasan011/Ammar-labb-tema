@@ -22,8 +22,10 @@ function script()
 {
     // wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
     // wp_register_script('script', get_template_directory_uri() . '/assets/js/script.js');
-    wp_enqueue_script('jquery', get_template_part_uri() . '/assets/js/jquery.js', array(), '1.0', true);
-    wp_enqueue_script('script', get_template_part_uri() . '/assets/js/script.js', array(), '1.0', true);
+    // wp_enqueue_script("jquery", get_template_directory_uri() . '/assets/js/jquery.js', '', '1,0', true);
+    // wp_enqueue_script("script", get_template_directory_uri() . '/assets/js/script.js', '', '1,0', true);
+    wp_enqueue_script('jquery', get_template_part_uri() . '/assets/js/jquery.js', '', '1,0', true);
+    wp_enqueue_script('script', get_template_part_uri() . '/assets/js/script.js', '', '1.0', true);
 };
 add_action('wp_enqueue_scripts', 'sheets', 'script');
 
@@ -46,16 +48,28 @@ function customwidget()
 {
     $widgets = array(
         array(
+            "name" => "Aside search",
+            "id" => "search",
+            'before_widget' => '',
+            'after_widget' => ''
+        ),
+        array(
             "name" => "Aside Sidor",
-            "id" => "sidor"
+            "id" => "sidor",
+            'before_widget' => '',
+            'after_widget' => ''
         ),
         array(
             "name" => "Aside Arkiv",
-            "id" => "arkiv"
+            "id" => "arkiv",
+            'before_widget' => '',
+            'after_widget' => ''
         ),
         array(
             "name" => "Aside Kategorier",
-            "id" => "kategorier"
+            "id" => "kategorier",
+            'before_widget' => '',
+            'after_widget' => ''
         ),
 
 
@@ -67,14 +81,20 @@ function customwidget()
             'after_widget' => ''
         ),
         array(
-            "name" => "footer Kontaktuppgifter",
-            "id" => "footer_Kontaktuppgifter",
+            "name" => " kontakt",
+            "id" => "footer_cont",
             'before_widget' => '',
             'after_widget' => ''
         ),
         array(
             "name" => "footer social media",
             "id" => "footer_social-media",
+            'before_widget' => '',
+            'after_widget' => ''
+        ),
+        array(
+            "name" => "footer copyright",
+            "id" => "footer_copyright",
             'before_widget' => '',
             'after_widget' => ''
         ),
