@@ -8,8 +8,8 @@
                     <!-- my article with the content -->
                     <?php while (have_posts()) { ?>
                         <article>
-
                             <?php the_post();
+                            // img in large size
                             the_post_thumbnail('large');
                             ?>
 

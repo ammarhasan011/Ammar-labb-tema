@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <!-- geting title -->
+    <!-- getting title -->
     <title> <?php wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -31,11 +31,8 @@
                     </div>
                     <div class="col-xs-4 text-right visible-xs">
                         <div class="mobile-menu-wrap">
-                            <!-- <i class="fa fa-search"></i>-->
+                            <i class="fa fa-search"></i>
                             <i class="fa fa-bars menu-icon"></i>
-
-                            <!-- search form -->
-                            <?php get_search_form(); ?>
                         </div>
                     </div>
                 </div>
@@ -47,9 +44,7 @@
                 <div>
                     <!-- search form -->
                     <?php get_search_form(); ?>
-                    <!-- <label class="screen-reader-text">Sök efter:</label>
-                    <input type="text" />
-                    <input type="submit" value="Sök" /> -->
+
                 </div>
             </form>
         </div>

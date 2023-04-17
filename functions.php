@@ -20,12 +20,13 @@ function script()
 {
     wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
     wp_register_script('script', get_template_directory_uri() . '/assets/js/script.js');
-    wp_enqueue_script("jquery", get_template_directory_uri() . '/assets/js/jquery.js', '', '1,0', true);
-    wp_enqueue_script("script", get_template_directory_uri() . '/assets/js/script.js', '', '1,0', true);
+    wp_enqueue_script("jquery", get_template_directory_uri() . '/assets/js/jquery.js', 'array()', '1,0', true);
+    wp_enqueue_script("script", get_template_directory_uri() . '/assets/js/script.js', 'array()', '1,0', true);
     // wp_enqueue_script('jquery', get_template_part_uri() . '/assets/js/jquery.js', '', '1,0', true);
     // wp_enqueue_script('script', get_template_part_uri() . '/assets/js/script.js', '', '1.0', true);
 };
-add_action('wp_enqueue_scripts', 'sheets', 'script');
+add_action('wp_enqueue_scripts', 'sheets');
+add_action('wp_enqueue_scripts', 'script');
 
 // creating a function to be able to add menus in WP admin panel
 function menu()
