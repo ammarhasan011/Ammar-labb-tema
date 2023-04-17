@@ -1,3 +1,5 @@
+<!-- template part for the date, name and kategory  -->
+
 <ul class="meta">
     <li>
         <i class="fa fa-calendar"></i> <?php echo get_the_date(); ?>

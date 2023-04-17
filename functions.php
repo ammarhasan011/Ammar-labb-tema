@@ -1,13 +1,11 @@
 <?php
-
+// adding theme support 
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('widgets');
 
 
-// här skapar jag en funktion som hämtar mina css filen
-
-
+// here I create a function that retrieves my CSS files
 function sheets()
 {
     wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
@@ -17,7 +15,7 @@ function sheets()
     wp_enqueue_style('font');
     wp_enqueue_style('style');
 };
-// här skapar jag en funktion som hämtar mina js filen
+// here I create a function that retrieves my JS file
 function script()
 {
     wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
@@ -29,7 +27,7 @@ function script()
 };
 add_action('wp_enqueue_scripts', 'sheets', 'script');
 
-// skapar en funktion för att kunna ha tillgång till menu
+// creating a function to be able to add menus in WP admin panel
 function menu()
 {
     $menues = array(
@@ -43,10 +41,12 @@ add_action('init', 'menu');
 
 
 
-// registrerar widgets
+// register widgets and create 4 for the sidebar and 4 widgets for the footer.
 function customwidget()
 {
     $widgets = array(
+
+        // sidebar widgets
         array(
             "name" => "Aside search",
             "id" => "search",
@@ -74,6 +74,7 @@ function customwidget()
 
 
 
+        // footer widgets
         array(
             "name" => "footer Kort om oss",
             "id" => "footer_kort_om_oss",

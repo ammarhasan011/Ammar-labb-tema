@@ -1,3 +1,4 @@
+<!-- header -->
 <?php get_header(); ?>
 <main>
     <section>
@@ -7,14 +8,16 @@
                     <div class="searchform-wrap">
                         <form id="searchform" class="searchform">
                             <div>
+                                <!-- search form -->
                                 <?php get_search_form(); ?>
-
                             </div>
                         </form>
                     </div>
+                    <!-- template-parts that fetches my articles with the_excerpt -->
                     <?php get_template_part('/template-parts/parts', 'article'); ?>
 
                     <nav class="navigation pagination">
+                        <!-- navigation pagination -->
                         <?php echo paginate_links(); ?>
                     </nav>
                 </div>
@@ -22,4 +25,5 @@
         </div>
     </section>
 </main>
+<!-- footer -->
 <?php get_footer(); ?>
